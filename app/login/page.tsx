@@ -1,5 +1,5 @@
 "use client"
-import { useRouter } from "next/navigation";
+
 import * as React from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -19,7 +19,6 @@ import { toast } from "@/components/ui/toast"
  */
 
 export default function LoginPage() {
-  const router = useRouter();
   const [loading, setLoading] = React.useState(false)
 
   async function mockSubmit(e: React.FormEvent, actionName: string) {
@@ -36,14 +35,7 @@ export default function LoginPage() {
   }
 
   return (
-    
     <main className="flex items-center justify-center bg-background p-4">
-        <button
-      onClick={() => router.back()}
-      className="fixed top-20 left-6 z-50 flex items-center gap-2 text-gray-700 hover:text-black transition"
-    >
-      ← <span>Terug</span>
-    </button>
       <Card className="w-full max-w-md">
         <CardHeader>
           <CardTitle>Welcome</CardTitle>
